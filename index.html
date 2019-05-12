@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <title>Wing Chun Trainer</title>
+  <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
+  <link rel='stylesheet' type='text/css' href='style.css'>
+  <script src="script.js"></script>
+</head>
+<body>
+  <h1>Wing Chun Trainer</h1>
+  <p id="text"></p>
+  
+  <div id="interaction">
+    <table>
+      <tr title="Anzahl der Wiederholungen">
+        <td>Wiederholungen: </td>
+        <td style="text-align:center">
+          <input id="repetitions" type="number" min="1" value="10" max="9999">
+        </td>
+      </tr>
+      <tr title="Wartezeit zwischen Anweisungen">
+        <td>Wartezeit: </td>
+        <td style="text-align:center">
+          <select required id='wait'>
+              <option value="0">0 ms</option>
+              <option value="500">500 ms</option>
+              <option value="1000" selected>1000 ms</option>
+              <option value="1500">1500 ms</option>
+              <option value="2000">2000 ms</option>
+          </select>
+        </td>
+      </tr>
+      <tr title="Anfäger: Tan/Gan Sao&#10;Fortgeschritten: Tan/Gan/Pak Sao&#10;Profi: Tan/Gan/Pak/Cham Sao&#10;Meister: Tan/Gan/Pak/Cham/Bong Sao">
+        <td>Schwierigkeitsgrad: </td>
+        <td style="text-align:center">
+          <select required id='difficulty'>
+            <option value="2">Anfänger</option>
+            <option value="3" selected>Fortgeschritten</option>
+            <option value="4">Profi</option>
+            <option value="5">Meister</option>
+          </select>
+        </td>
+      </tr>
+    </table>
+
+    <button id="button" onclick="start();">Start</button>
+  </div>
+
+  <img id="image" src="images/hand.jpg" alt="Bild der Techniken">
+
+  <audio id="audio"></audio>
+
+  <audio autoplay volume="0" preload="auto" src="audio/side/links.mp3"      type="audio/mpeg"></audio>
+  <audio autoplay volume="0" preload="auto" src="audio/side/rechts.mp3"     type="audio/mpeg"></audio>
+ 
+  <audio autoplay volume="0" preload="auto" src="audio/technique/tan.mp3"   type="audio/mpeg"></audio>
+  <audio autoplay volume="0" preload="auto" src="audio/technique/gan.mp3"   type="audio/mpeg"></audio>
+  <audio autoplay volume="0" preload="auto" src="audio/technique/pak.mp3"   type="audio/mpeg"></audio>
+  <audio autoplay volume="0" preload="auto" src="audio/technique/cham.mp3"  type="audio/mpeg"></audio>
+  <audio autoplay volume="0" preload="auto" src="audio/technique/bong.mp3"  type="audio/mpeg"></audio>
+</body>
+</html>
